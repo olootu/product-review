@@ -125,7 +125,7 @@ button {
   font-weight: 800;
   color: green;
   position: relative;
-  left: 70%;
+  left: 45%;
   cursor: pointer;
 }
 
@@ -170,7 +170,7 @@ button {
     height: 25px;
   }
 
-  /* .likes {
-      bottom: 45px;
-    } */
+  .all-review-link {
+    left: 70%;
+  }
 }

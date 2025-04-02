@@ -207,6 +207,8 @@ textarea {
     font-size: 1.2rem;
 }
 
+li > a.active { color: #F97924 }
+
 /* Desktop device and larger devices */
 @media only screen and (min-width: 1025px) {
   nav {

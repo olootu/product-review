@@ -12,22 +12,22 @@
   <!-- Desktop menu list -->
   <div class="menu-holder">
     <ul class="desktop-menu-list">
-      <li><a routerLink="/" class="home-page">Home</a></li>
-      <li><a routerLink="/beauty" class="project-page">Beauty</a></li>
-      <li><a routerLink="/cars" class="register-page">Cars</a></li>
+      <li><a routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="home-page">Home</a></li>
+      <li><a routerLink="/beauty" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="project-page">Beauty</a></li>
+      <li><a routerLink="/cars" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="register-page">Cars</a></li>
       <li>
-        <div class="donate"><a routerLink="/contact" class="donate-page">Contact</a></div>
+        <div class="donate"><a routerLink="/contact" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="donate-page">Contact</a></div>
       </li>
     </ul>
 
     <!-- Mobile menu list -->
     @if(showMenu) {
     <ul class="mobile-menu-list">
-      <li><a routerLink="/" class="home-page">Home</a></li>
-      <li><a routerLink="/beauty" class="project-page">Beauty</a></li>
-      <li><a routerLink="/cars" class="register-page">Cars</a></li>
+      <li><a routerLink="/home" class="home-page">Home</a></li>
+      <li><a routerLink="/beauty" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="project-page">Beauty</a></li>
+      <li><a routerLink="/cars" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="register-page">Cars</a></li>
       <li>
-        <div class="donate"><a routerLink="/contact" class="donate-page">Contact</a></div>
+        <div class="donat"><a routerLink="/contact" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="donate-pae">Contact</a></div>
       </li>
     </ul>
     }
