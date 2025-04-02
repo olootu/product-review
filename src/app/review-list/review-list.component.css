@@ -1,16 +1,19 @@
 .list {
     padding: 20px;
+    height: 100%;
+    overflow: scroll;
 }
 
 .close {
     font-weight: 800;
-    position: relative;
-    left: 50%;
+    position: absolute;
+    left: 75%;
 }
 
 p {
     font-weight: 800;
     margin-bottom: 5px;
+    color: green;
 }
 
 .rv-item {
@@ -19,4 +22,14 @@ p {
     border-bottom: 2px solid #222;
     margin-bottom: 10px;
     width: 89%;
+    padding-bottom: 20px;
 }
+
+.no-review-error {
+    color: red;
+    display: inline-block;
+    background: #fff;
+    margin-top: 70px;
+    width: 90%;
+  }
+  

@@ -8,7 +8,7 @@ import { ReviewList } from '../product.model';
   styleUrl: './review-list.component.css'
 })
 export class ReviewListComponent {
-  @Input() data!: ReviewList;
+  @Input() data: ReviewList[] = [];
   @Output() closeDialog = new EventEmitter();
 
   closeReview() {

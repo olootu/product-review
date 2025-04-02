@@ -41,9 +41,9 @@
                 }
 
                 @if(showAllProductReviews && productId === data.id) {
-                @for (rev of reviewListToDisplay(); track rev.uniqueId) {
-                <app-review-list (closeDialog)="closeReview()" [data]="rev"></app-review-list>
-                }
+                <!-- @for (rev of reviewListToDisplay(); track rev.uniqueId) { -->
+                <app-review-list (closeDialog)="closeReview()" [data]="reviewListToDisplay()"></app-review-list>
+                <!-- } -->
 
                 }
             </div>
