@@ -1,0 +1,56 @@
+<div>
+    <!-- The hero image will be dynamically injected here  in the hero class -->
+    <div class="hero">
+        <app-hero [image]="'beauty'" [alt]="'image showing  reviewer volunteers'"></app-hero>
+    </div>
+    <app-slogan></app-slogan>
+    <div class="news">
+
+        @for (data of beautyProducts(); track data.id) {
+        <div class="project-details">
+            <div class="item slug">
+                <img src="{{data.image}}" alt="{{data.title}} picture">
+            </div>
+            <div class="item details">
+                @if(responseMsg && productId === data.id){
+                <p class="review-response">{{message}}</p>
+                }
+                <h2>{{data.title}}</h2>
+                <p>Price:
+                    {{data.price}}
+                </p>
+                @if(showReviewListError && productId === data.id){
+                <span class="no-review-error">No Review yet for this item!</span>
+                }
+                <p> <i class="material-icons" id="{{data.id}}">thumb_up </i>
+                    <span class="rating">{{data?.rating?.count}}</span>
+                    <span (click)="seeAllReviews(data.id)" id="{{data.id}}" class="all-review-link"> See all
+                        reviews</span>
+                </p>
+                <p>Description:
+                    {{data.description}}
+                </p>
+                <div class="join-proj">
+                    <span class="likes">
+                        <a (click)="toggleReview(data.id)" id="{{data.id}}" class="join-bt">Review product</a>
+                    </span>
+                </div>
+
+                @if(showReview && productId === data.id){
+                <app-review [data]="data" (closeDialog)="closeReview()" (emitReview)="postReview($event)"></app-review>
+                }
+
+                @if(showAllProductReviews && productId === data.id) {
+                @for (rev of reviewListToDisplay(); track rev.uniqueId) {
+                <app-review-list (closeDialog)="closeReview()" [data]="rev"></app-review-list>
+                }
+
+                }
+            </div>
+
+        </div>
+        }
+
+
+    </div>
+</div>

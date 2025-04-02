@@ -1,0 +1,14 @@
+.list {
+    padding: 20px;
+}
+
+.close {
+    font-weight: 800;
+    position: relative;
+    left: 50%;
+}
+
+p {
+    font-weight: 800;
+    margin-bottom: 5px;
+}

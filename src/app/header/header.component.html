@@ -1,0 +1,35 @@
+<!-- Begin of Header section-->
+<a class="skip-to-content" href="#main">Skip to content</a>
+<nav class="nav">
+  <div class="logo-holder">
+    <a href="/index.html">
+      <img src="images/logo.jpg" class="logo" alt="GIS analytics logo">
+    </a>
+    <div class="menu-icon">
+      <i (click)="toggleMenu()" class="material-icons">menu</i>
+    </div>
+  </div>
+  <!-- Desktop menu list -->
+  <div class="menu-holder">
+    <ul class="desktop-menu-list">
+      <li><a routerLink="/" class="home-page">Home</a></li>
+      <li><a routerLink="/beauty" class="project-page">Beauty</a></li>
+      <li><a routerLink="/cars" class="register-page">Cars</a></li>
+      <li>
+        <div class="donate"><a routerLink="/contact" class="donate-page">Contact</a></div>
+      </li>
+    </ul>
+
+    <!-- Mobile menu list -->
+    @if(showMenu) {
+    <ul class="mobile-menu-list">
+      <li><a routerLink="/" class="home-page">Home</a></li>
+      <li><a routerLink="/beauty" class="project-page">Beauty</a></li>
+      <li><a routerLink="/cars" class="register-page">Cars</a></li>
+      <li>
+        <div class="donate"><a routerLink="/contact" class="donate-page">Contact</a></div>
+      </li>
+    </ul>
+    }
+  </div>
+</nav>

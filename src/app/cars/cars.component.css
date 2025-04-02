@@ -1,0 +1,11 @@
+.cars {
+  width: 500px;
+  margin: 0 auto;
+  height: 100vh;
+}
+
+.cars img {
+  width: 100%;
+  height: auto;
+  opacity: 0.3;
+}
