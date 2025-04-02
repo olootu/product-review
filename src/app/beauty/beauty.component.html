@@ -20,7 +20,7 @@
                     {{data.price}}
                 </p>
                 @if(showReviewListError && productId === data.id){
-                <span class="no-review-error">No Review yet for this item!</span>
+                <span class="no-review-error">No Review yet for this item! Click on the "Review product" button to be the first reviewer.</span>
                 }
                 <p> <i class="material-icons" id="{{data.id}}">thumb_up </i>
                     <span class="rating">{{data?.rating?.count}}</span>
