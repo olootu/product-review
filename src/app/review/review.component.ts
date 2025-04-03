@@ -13,11 +13,22 @@ import { v4 as uuidv4 } from 'uuid';
 })
 export class ReviewComponent {
   private form = inject(FormBuilder);
-  @Input() data!: Product;
+  @Input() data: Product = {
+    category: '',
+    description: '',
+    id: 0,
+    image: '',
+    price: 0,
+    title: '',
+    rating: {
+      rate: 0,
+      count: 0
+    }
+  };
   @Output() emitReview = new EventEmitter();
   @Output() closeDialog = new EventEmitter();
   errorMsg = 'Reviews field is required!';
-  showError: boolean = false;
+  showError = false;
   reviewForm: FormGroup = this.form.group({
     name: ['anonymous'],
     reviews: ['', Validators.required]

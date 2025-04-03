@@ -1,4 +1,4 @@
-import { Component, inject, OnInit, Signal, signal } from '@angular/core';
+import { Component, inject, OnInit, signal } from '@angular/core';
 import { HeroComponent } from '../hero/hero.component';
 import { SloganComponent } from '../slogan/slogan.component';
 import { ProductService } from '../product.service';
@@ -22,11 +22,11 @@ import { ReviewListComponent } from '../review-list/review-list.component';
 export class BeautyComponent implements OnInit {
   private http = inject(ProductService);
   beautyProducts = signal<Product[]>([]);
-  showReview: boolean = false;
-  showAllProductReviews: boolean = false;
-  showReviewListError: boolean = false;
-  productId: number = 0;
-  responseMsg: boolean = true;
+  showReview = false;
+  showAllProductReviews = false;
+  showReviewListError = false;
+  productId = 0;
+  responseMsg = true;
   reviewList = signal<ReviewList[]>([]);
   reviewListToDisplay = signal<ReviewList[]>([]);
   message = 'Thank you for your review';
@@ -66,7 +66,7 @@ export class BeautyComponent implements OnInit {
     this.showReview = false;
     this.responseMsg = true;
     this.productId = res.id;
-    let findItem = this.beautyProducts().find((item: Product) => item.id === res.id);
+    const findItem = this.beautyProducts().find((item: Product) => item.id === res.id);
     if (findItem) {
       findItem.rating.count += 1;
 
@@ -102,7 +102,7 @@ export class BeautyComponent implements OnInit {
       return
     }
     const newItem = JSON.parse(reviewFromLS)
-    const filteredProduct = newItem.filter((item: any) => item.productId === id);
+    const filteredProduct = newItem.filter((item: ReviewList) => item.productId === id);
     if (!filteredProduct.length) {
       this.showReviewListError = true;
       return

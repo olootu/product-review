@@ -10,7 +10,7 @@ import { RouterModule } from '@angular/router';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
-  showMenu: boolean = false;
+  showMenu = false;
 
   toggleMenu() {
     this.showMenu = !this.showMenu;

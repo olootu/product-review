@@ -7,7 +7,7 @@ import { Component, Input } from '@angular/core';
   styleUrl: './hero.component.css'
 })
 export class HeroComponent {
-  @Input() image: string = '';
-  @Input() alt?: string = 'Hero image';
+  @Input() image = '';
+  @Input() alt? = 'Hero image';
 
 }

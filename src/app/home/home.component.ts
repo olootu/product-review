@@ -1,4 +1,4 @@
-import { Component, Inject } from '@angular/core';
+import { Component} from '@angular/core';
 import { HeroComponent } from '../hero/hero.component';
 import { SloganComponent } from '../slogan/slogan.component';
 import { Router } from '@angular/router';
