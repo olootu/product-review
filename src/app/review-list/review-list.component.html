@@ -3,13 +3,8 @@
         <span (click)="closeReview()" class="close">X (close)</span>
         @if (data.length > 0) {
         @for(rv of data; track rv.uniqueId) {
+           <app-review-list-item [eachReview]="rv"></app-review-list-item>
            
-                <div class="rv-item">
-                    <p>Reviewed by:</p>
-                    <span>{{rv.review.name}}</span>
-                    <p>Reviews:</p>
-                    <span>{{rv.review.reviews}}</span>
-                </div>
 
                
         
