@@ -3,8 +3,7 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'app-slogan',
   imports: [],
-  templateUrl: './slogan.component.html',
-  styleUrl: './slogan.component.css'
+  templateUrl: './slogan.component.html'
 })
 export class SloganComponent {
   @Input() title?: string = 'We are Reviewers!';

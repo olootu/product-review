@@ -1,0 +1,6 @@
+projectKey=product-review
+serverUrl=http://localhost:9000
+serverVersion=25.4.0.105899
+dashboardUrl=http://localhost:9000/dashboard?id=product-review
+ceTaskId=afcd5ea6-b143-4f5d-9184-ef9bc2e3e30c
+ceTaskUrl=http://localhost:9000/api/ce/task?id=afcd5ea6-b143-4f5d-9184-ef9bc2e3e30c

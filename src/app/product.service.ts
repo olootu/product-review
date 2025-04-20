@@ -9,7 +9,7 @@ import { Product } from './product.model';
 export class ProductService {
   url = 'https://fakestoreapi.com/products';
 
-  constructor(private http: HttpClient) { }
+  constructor(private readonly http: HttpClient) { }
 
   getProduct(): Observable<Product[]> {
     return this.http.get<Product[]>(this.url);

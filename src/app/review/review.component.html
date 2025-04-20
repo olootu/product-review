@@ -1,7 +1,7 @@
 <div class="new-join">
     <div class="join-form">
         <form [formGroup]="reviewForm">
-            <span (click)="closeReview()" class="close">X (close)</span>
+            <span (onKeyUp)="closeReview()" (click)="closeReview()" class="close">X (close)</span>
             <p class="review-title"> {{data.title}}</p>
             <label for="name">Name: </label>
             <input formControlName="name" id="name" type="text">
@@ -10,7 +10,7 @@
             <span class="formError">{{errorMsg}}</span>
             }
             <textarea formControlName="reviews" id="review"></textarea> <br>
-            <button (click)="postReview(data.id)" class="join-send">Send Review</button>
+            <button (onKeyUp)="postReview(data.id)" (click)="postReview(data.id)" class="join-send">Send Review</button>
         </form>
 
     </div>

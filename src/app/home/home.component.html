@@ -7,29 +7,29 @@
     <h1 class="home-title heading">Home</h1>
 
     <div class="home-info">
-        <div class="item project" (click)="navigateToPage('beauty')">
+        <div class="item project" (onKeyDown)="navigateToPage('beauty')" (click)="navigateToPage('beauty')">
             <div class="item-text">
                 <p>Review Beautys.</p>
             </div>
             <div class="item-pic">
-                <img src="./images/boysandgirls.jpg" alt="Picture showing staff">
+                <img src="./images/boysandgirls.jpg" alt="showing staff">
             </div>
         </div>
-        <div class="item register" (click)="navigateToPage('cars')">
+        <div class="item register" (onKeyDown)="navigateToPage('cars')" (click)="navigateToPage('cars')">
             <div class="item-text">
                 <p>Review our cars.</p>
             </div>
             <div class="item-pic">
-                <img src="./images/three-volunteers.jpg" alt="picture of three staff">
+                <img src="./images/three-volunteers.jpg" alt="three staff">
             </div>
         </div>
 
-        <div class="item contact" (click)="navigateToPage('contact')">
+        <div class="item contact" (onKeyDown)="navigateToPage('contact')" (click)="navigateToPage('contact')">
             <div class="item-text">
                 <p>Get in touch with us.</p>
             </div>
             <div class="item-pic">
-                <img src="./images/contact.jpg" alt="Contact us image showing a telephone">
+                <img src="./images/contact.jpg" alt="Contact us telephone">
             </div>
         </div>
     </div>

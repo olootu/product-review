@@ -9,7 +9,7 @@
         @for (data of beautyProducts(); track data.id) {
         <div class="project-details">
             <div class="item slug">
-                <img src="{{data.image}}" alt="{{data.title}} picture">
+                <img src="{{data.image}}" alt="{{data.title}}">
             </div>
             <div class="item details">
                 @if(responseMsg && productId === data.id){
@@ -24,7 +24,7 @@
                 }
                 <p> <i class="material-icons" id="{{data.id}}">thumb_up </i>
                     <span class="rating">{{data?.rating?.count}}</span>
-                    <span (click)="seeAllReviews(data.id)" id="{{data.id}}" class="all-review-link"> See all
+                    <span (onKeyDown)="seeAllReviews(data.id)" (click)="seeAllReviews(data.id)" id="{{data.id}}" class="all-review-link"> See all
                         reviews</span>
                 </p>
                 <p>Description:

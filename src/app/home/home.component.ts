@@ -13,7 +13,7 @@ import { Router } from '@angular/router';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
-  constructor(private route: Router) { }
+  constructor(private readonly route: Router) { }
 
   navigateToPage(navigation: string) {
     this.route.navigate([`/${navigation}`]);

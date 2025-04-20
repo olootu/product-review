@@ -20,7 +20,7 @@ import { ReviewListComponent } from '../review-list/review-list.component';
   styleUrl: './beauty.component.css'
 })
 export class BeautyComponent implements OnInit {
-  private http = inject(ProductService);
+  private readonly http = inject(ProductService);
   beautyProducts = signal<Product[]>([]);
   showReview = false;
   showAllProductReviews = false;

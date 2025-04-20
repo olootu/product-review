@@ -1,6 +1,6 @@
 <div class="new-join list pr-details">
     <div class="join-form">
-        <span (click)="closeReview()" class="close">X (close)</span>
+        <span (onKeyUp)="closeReview()" (click)="closeReview()" class="close">X (close)</span>
         @if (data.length > 0) {
         @for(rv of data; track rv.uniqueId) {
            <app-review-list-item [eachReview]="rv"></app-review-list-item>

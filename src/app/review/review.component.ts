@@ -12,7 +12,7 @@ import { v4 as uuidv4 } from 'uuid';
   styleUrl: './review.component.css'
 })
 export class ReviewComponent {
-  private form = inject(FormBuilder);
+  private readonly form = inject(FormBuilder);
   @Input() data: Product = {
     category: '',
     description: '',
